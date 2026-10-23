@@ -1,0 +1,3 @@
+# Trader skill pack working data (portfolio, orders, config with SEC user agent)
+trader/
+__pycache__/
