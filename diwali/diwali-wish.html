@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Tiro+Devanagari+Hindi&family=Lora:ital@0;1&display=block" rel="stylesheet">
+<style>
+  :root { --gold:#f6c453; --gold2:#ffdf8a; --deep:#2a0a1f; --maroon:#5c0f2e; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1080px; height:1080px; background:var(--deep); overflow:hidden; }
+  .card {
+    position:relative; width:1080px; height:1080px;
+    background:
+      radial-gradient(circle at 50% 62%, rgba(255,170,60,.35) 0%, rgba(255,120,40,.12) 22%, transparent 45%),
+      radial-gradient(circle at 50% 40%, #7a1640 0%, #4a0b2a 45%, #1e0616 100%);
+    font-family:'Lora', serif; color:#fff; text-align:center;
+  }
+  .frame { position:absolute; inset:28px; border:2px solid rgba(246,196,83,.7); border-radius:18px; }
+  .frame2 { position:absolute; inset:40px; border:1px solid rgba(246,196,83,.35); border-radius:12px; }
+  .mandala { position:absolute; left:50%; top:600px; transform:translate(-50%,-50%); opacity:.22; }
+  .corner { position:absolute; width:120px; height:120px; opacity:.85; }
+  .tl{top:22px;left:22px} .tr{top:22px;right:22px;transform:scaleX(-1)}
+  .bl{bottom:22px;left:22px;transform:scaleY(-1)} .br{bottom:22px;right:22px;transform:scale(-1,-1)}
+  .hindi { position:absolute; top:110px; width:100%; font-family:'Tiro Devanagari Hindi', serif;
+    font-size:72px; color:var(--gold2); text-shadow:0 0 18px rgba(255,190,80,.55); }
+  .happy { position:absolute; top:215px; width:100%; font-family:'Great Vibes', cursive; font-size:150px;
+    line-height:1; color:var(--gold); text-shadow:0 2px 0 #8a4b10, 0 0 30px rgba(255,180,60,.5); }
+  .diya { position:absolute; left:50%; top:430px; transform:translateX(-50%); }
+  .msg { position:absolute; top:735px; width:100%; padding:0 150px; font-size:31px; line-height:1.5;
+    color:#fbe9d0; font-style:italic; }
+  .divider { position:absolute; top:870px; left:50%; transform:translateX(-50%); }
+  .from-label { position:absolute; top:893px; width:100%; font-size:24px; letter-spacing:6px;
+    text-transform:uppercase; color:rgba(251,233,208,.8); }
+  .from { position:absolute; top:928px; width:100%; font-family:'Playfair Display', serif; font-weight:700;
+    font-size:46px; color:var(--gold2); letter-spacing:1px; }
+  .spark { position:absolute; border-radius:50%; background:#ffe7a3; box-shadow:0 0 10px 3px rgba(255,210,120,.8); }
+</style>
+</head>
+<body>
+<div class="card">
+  <!-- soft mandala -->
+  <svg class="mandala" width="900" height="900" viewBox="-450 -450 900 900">
+    <g fill="none" stroke="#f6c453" stroke-width="2">
+      <circle r="420"/><circle r="380"/><circle r="300"/>
+      <g id="petals"></g>
+    </g>
+  </svg>
+
+  <div class="frame"></div><div class="frame2"></div>
+
+  <!-- corner ornaments -->
+  <svg class="corner tl" viewBox="0 0 120 120"><g fill="none" stroke="#f6c453" stroke-width="2.5"><path d="M10 70 Q10 10 70 10"/><path d="M22 70 Q22 22 70 22"/><circle cx="34" cy="34" r="7" fill="#f6c453"/></g></svg>
+  <svg class="corner tr" viewBox="0 0 120 120"><g fill="none" stroke="#f6c453" stroke-width="2.5"><path d="M10 70 Q10 10 70 10"/><path d="M22 70 Q22 22 70 22"/><circle cx="34" cy="34" r="7" fill="#f6c453"/></g></svg>
+  <svg class="corner bl" viewBox="0 0 120 120"><g fill="none" stroke="#f6c453" stroke-width="2.5"><path d="M10 70 Q10 10 70 10"/><path d="M22 70 Q22 22 70 22"/><circle cx="34" cy="34" r="7" fill="#f6c453"/></g></svg>
+  <svg class="corner br" viewBox="0 0 120 120"><g fill="none" stroke="#f6c453" stroke-width="2.5"><path d="M10 70 Q10 10 70 10"/><path d="M22 70 Q22 22 70 22"/><circle cx="34" cy="34" r="7" fill="#f6c453"/></g></svg>
+
+  <div class="hindi">शुभ दीपावली</div>
+  <div class="happy">Happy Diwali</div>
+
+  <!-- diya -->
+  <svg class="diya" width="420" height="300" viewBox="0 0 420 300">
+    <defs>
+      <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#fff3c4" stop-opacity=".95"/>
+        <stop offset="35%" stop-color="#ffb347" stop-opacity=".55"/>
+        <stop offset="100%" stop-color="#ff7a00" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#ff5a00"/>
+        <stop offset="45%" stop-color="#ffb000"/>
+        <stop offset="100%" stop-color="#fff6c8"/>
+      </linearGradient>
+      <linearGradient id="clay" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffcf6b"/>
+        <stop offset="50%" stop-color="#e2902a"/>
+        <stop offset="100%" stop-color="#9a4a10"/>
+      </linearGradient>
+    </defs>
+    <circle cx="210" cy="110" r="125" fill="url(#glow)"/>
+    <!-- flame -->
+    <path d="M210 30 C232 72 246 98 238 128 C232 152 188 152 182 128 C174 98 190 72 210 30 Z" fill="url(#flame)"/>
+    <path d="M210 82 C219 102 224 114 220 128 C217 140 203 140 200 128 C196 114 202 102 210 82 Z" fill="#fffbe6"/>
+    <rect x="207" y="140" width="6" height="18" rx="3" fill="#5a2a0a"/>
+    <!-- bowl -->
+    <path d="M70 160 Q210 140 350 160 Q330 250 210 258 Q90 250 70 160 Z" fill="url(#clay)"/>
+    <path d="M350 160 Q395 150 405 135 Q392 170 345 182 Z" fill="#e2902a"/>
+    <ellipse cx="210" cy="160" rx="140" ry="18" fill="#7a3208"/>
+    <ellipse cx="210" cy="158" rx="128" ry="12" fill="#f4b23c" opacity=".85"/>
+    <!-- bowl pattern -->
+    <g fill="#fff1c9" opacity=".9">
+      <circle cx="130" cy="205" r="6"/><circle cx="170" cy="215" r="6"/><circle cx="210" cy="219" r="7"/>
+      <circle cx="250" cy="215" r="6"/><circle cx="290" cy="205" r="6"/>
+    </g>
+    <path d="M100 190 Q210 212 320 190" stroke="#7a3208" stroke-width="3" fill="none"/>
+    <path d="M115 232 Q210 250 305 232" stroke="#7a3208" stroke-width="2" fill="none" opacity=".6"/>
+  </svg>
+
+  <div class="msg">May the light of diyas fill your home with joy,<br>good health and prosperity.</div>
+
+  <svg class="divider" width="300" height="20" viewBox="0 0 300 20">
+    <line x1="0" y1="10" x2="125" y2="10" stroke="#f6c453" stroke-width="1.5"/>
+    <path d="M150 2 L158 10 L150 18 L142 10 Z" fill="#f6c453"/>
+    <line x1="175" y1="10" x2="300" y2="10" stroke="#f6c453" stroke-width="1.5"/>
+  </svg>
+  <div class="from-label">Warm wishes from</div>
+  <div class="from">Shrey Doshi &amp; Family</div>
+</div>
+
+<script>
+  // mandala petals
+  const g = document.getElementById('petals');
+  for (let i = 0; i < 24; i++) {
+    const a = i * 15;
+    g.insertAdjacentHTML('beforeend',
+      `<path transform="rotate(${a})" d="M0 -300 Q30 -340 0 -380 Q-30 -340 0 -300 Z"/>` +
+      `<circle transform="rotate(${a + 7.5})" cx="0" cy="-400" r="6" fill="#f6c453"/>`);
+  }
+  // sparkles (fixed seed so output is repeatable)
+  let s = 7; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const card = document.querySelector('.card');
+  for (let i = 0; i < 46; i++) {
+    const x = 60 + rnd() * 960, y = 60 + rnd() * 960;
+    // keep sparkles off the text and diya areas
+    if ((y > 100 && y < 360 && x > 150 && x < 930) || (y > 420 && y < 1000 && x > 140 && x < 940)) continue;
+    const d = 2 + rnd() * 4;
+    card.insertAdjacentHTML('beforeend',
+      `<div class="spark" style="left:${x}px;top:${y}px;width:${d}px;height:${d}px;opacity:${.5 + rnd() * .5}"></div>`);
+  }
+</script>
+</body>
+</html>
